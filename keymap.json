@@ -1,0 +1,139 @@
+[
+  {
+    // any context
+    "context": "",
+    "bindings": {
+      "alt-d": "workspace::ToggleBottomDock",
+    },
+  },
+  {
+    "context": "Editor && MessageEditor",
+    "bindings": {
+      "alt-h": "workspace::ActivatePaneLeft",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+    },
+  },
+  {
+    // editor binds
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "tab": "tab_switcher::Toggle",
+      "ctrl-alt-s": "workspace::SaveWithoutFormat",
+      "space e": "project_panel::ToggleFocus",
+      "space g": "git_panel::ToggleFocus",
+      "space t": "terminal_panel::ToggleFocus",
+      "space x": "diagnostics::Deploy",
+      "space a": "agent::ToggleFocus",
+      "space d": "debug_panel::ToggleFocus",
+      "space r": "editor::RestartLanguageServer",
+      "space b": "editor::ToggleBreakpoint",
+      // swapping
+      "[ [": "pane::SwapItemLeft",
+      "] ]": "pane::SwapItemRight",
+    },
+  },
+  {
+    // editor binds
+    "context": "Pane || Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-l": "pane::ActivateNextItem",
+      "ctrl-h": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    // editor binds
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "ctrl-h": "editor::ContextMenuPrevious",
+      "ctrl-l": "editor::ContextMenuNext",
+    },
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "d": "tab_switcher::CloseSelectedItem",
+      "j": ["workspace::SendKeystrokes", "down"],
+      "k": ["workspace::SendKeystrokes", "up"],
+    },
+  },
+  {
+    // pane & navigation binds
+    "context": "Pane || ProjectPanel || Terminal || (Assistant && vim_mode == normal)|| (Editor && vim_mode == normal)",
+    "bindings": {
+      // pane tab navigation
+      "ctrl-q": "pane::CloseActiveItem",
+      // workspace panel navigation
+      "ctrl-shift-q": "zed::Quit",
+      "alt-h": "workspace::ActivatePaneLeft",
+      "alt-l": "workspace::ActivatePaneRight",
+      "alt-k": "workspace::ActivatePaneUp",
+      "alt-j": "workspace::ActivatePaneDown",
+      // splitting
+      "ctrl-t k": "pane::SplitUp",
+      "ctrl-t j": "pane::SplitDown",
+      "ctrl-t h": "pane::SplitLeft",
+      "ctrl-t l": "pane::SplitRight",
+      // debugger
+      "ctrl-shift-h": "debugger::StepBack",
+      "ctrl-shift-j": "debugger::StepInto",
+      "ctrl-shift-k": "debugger::StepOut",
+      "ctrl-shift-l": "debugger::StepOver",
+      "ctrl-shift-n": "debugger::Continue",
+      "ctrl-shift-c": "debugger::Continue",
+      "ctrl-shift-s": "debugger::Stop",
+      "ctrl-shift-g": "debugger::Start",
+      "ctrl-shift-r": "debugger::Restart",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-n": "workspace::NewTerminal",
+    },
+  },
+  {
+    "context": "Terminal && !vi_mode",
+    "bindings": {
+      "escape": "terminal_panel::ToggleFocus",
+      "shift-space": "terminal::ToggleViMode",
+    },
+  },
+  {
+    "context": "Terminal && vi_mode",
+    "bindings": {
+      "escape": "terminal::ToggleViMode",
+    },
+  },
+  {
+    "context": "DebugPanel",
+    "bindings": {
+      "escape": "debug_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "escape": "git_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "escape": "agent::ToggleFocus",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "escape": "project_panel::ToggleFocus",
+    },
+  },
+]

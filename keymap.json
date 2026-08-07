@@ -21,18 +21,18 @@
   },
   {
     // editor binds
-    "context": "Editor && vim_mode == normal",
+    "context": "Workspace",
     "bindings": {
       "tab": "tab_switcher::Toggle",
       "ctrl-alt-s": "workspace::SaveWithoutFormat",
-      "space e": "project_panel::ToggleFocus",
-      "space g": "git_panel::ToggleFocus",
-      "space t": "terminal_panel::ToggleFocus",
-      "space x": "diagnostics::Deploy",
-      "space a": "agent::ToggleFocus",
-      "space d": "debug_panel::ToggleFocus",
-      "space r": "editor::RestartLanguageServer",
-      "space b": "editor::ToggleBreakpoint",
+      "alt-e": "project_panel::Toggle",
+      "alt-g": "git_panel::Toggle",
+      "alt-t": "terminal_panel::Toggle",
+      "alt-x": "diagnostics::Deploy",
+      "alt-a": "agent::Toggle",
+      "alt-d": "debug_panel::Toggle",
+      "alt-r": "editor::RestartLanguageServer",
+      "alt-b": "editor::ToggleBreakpoint",
       // swapping
       "[ [": "pane::SwapItemLeft",
       "] ]": "pane::SwapItemRight",
@@ -97,6 +97,11 @@
     "context": "Terminal",
     "bindings": {
       "ctrl-n": "workspace::NewTerminal",
+      "alt-e": "project_panel::Toggle",
+      "alt-g": "git_panel::Toggle",
+      "alt-t": "terminal_panel::Toggle",
+      "alt-a": "agent::Toggle",
+      "alt-d": "debug_panel::Toggle",
     },
   },
   {
@@ -134,6 +139,18 @@
     "context": "ProjectPanel",
     "bindings": {
       "escape": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-f": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-p": "file_finder::Toggle",
     },
   },
 ]

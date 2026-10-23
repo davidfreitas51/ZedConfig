@@ -7,21 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Catppuccin Latte",
+  "cli_default_open_behavior": "existing_window",
+  "agent": {
+    "default_model": {
+      "provider": "lmstudio",
+      "model": "qwen/qwen3.5-9b",
+      "enable_thinking": false,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "icon_theme": "Catppuccin Mocha",
   "session": {
-    "trust_all_worktrees": true
+    "trust_all_worktrees": true,
   },
   "vim_mode": true,
   "project_panel": {
-    "auto_fold_dirs": false
+    "auto_fold_dirs": false,
   },
   "minimap": {
-    "show": "always"
+    "show": "always",
   },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
-    }
+      "milliseconds": 1000,
+    },
   },
   "buffer_font_family": "JetBrains Mono",
   "auto_indent_on_paste": true,
@@ -33,6 +43,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "Catppuccin Mocha",
   },
 }

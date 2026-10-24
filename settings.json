@@ -18,6 +18,11 @@
     "model_parameters": [],
   },
   "icon_theme": "Catppuccin Mocha",
+  "terminal": {
+    "shell": {
+      "program": "/usr/bin/zsh",
+    },
+  },
   "session": {
     "trust_all_worktrees": true,
   },

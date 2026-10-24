@@ -21,7 +21,7 @@
   },
   {
     // editor binds
-    "context": "Workspace",
+    "context": "Workspace && !Terminal",
     "bindings": {
       "tab": "tab_switcher::Toggle",
       "ctrl-alt-s": "workspace::SaveWithoutFormat",

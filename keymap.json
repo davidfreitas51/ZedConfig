@@ -153,4 +153,10 @@
       "ctrl-p": "file_finder::Toggle",
     },
   },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "v a a": ["workspace::SendKeystrokes", "V g g G"],
+    },
+  },
 ]
